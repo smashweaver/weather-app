@@ -1,10 +1,10 @@
-import { Canvas, Rect, LinearGradient, vec } from '@shopify/react-native-skia';
+import { Canvas, Rect, LinearGradient, vec } from '@shopify/react-native-skia'
 import React from 'react'
 
 interface SkiaGradientRectProps {
-  width: number;
-  height: number;
-  colors: string[];
+  width: number
+  height: number
+  colors: string[]
 }
 
 function SkiaGradientRect({ width, height, colors }: SkiaGradientRectProps) {

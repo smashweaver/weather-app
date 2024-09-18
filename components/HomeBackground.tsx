@@ -1,7 +1,7 @@
 import { useWindowDimensions } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
-import SkiaGradientRect from './SkiaGradientRect';
+import SkiaGradientRect from './SkiaGradientRect'
 
 function HomeBackground() {
   const { width, height } = useWindowDimensions();

@@ -13,6 +13,12 @@
     },
     "plugins": [
       [
+        "expo-dev-launcher",
+        {
+          "launchMode": "most-recent"
+        }
+      ],
+      [
         "expo-location",
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
@@ -37,6 +43,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5d5d34ce-4587-4cfd-adb7-1f0973d7e684"
+      }
+    },
+    "owner": "jasonjimenez"
   }
 }

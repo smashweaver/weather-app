@@ -33,16 +33,41 @@ export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_H
 
    You should see `pixel_2_api34` in the list.
 
-4. **Run the New AVD**:
+4. **Test the New AVD**:
 
    Start the newly created `pixel_2_api34` AVD with:
 
    ```bash
-   emulator -avd pixel_2_api34
+   npm run emulator
    ```
 
-   This will launch the Android emulator with the specified AVD.
+   Stop the AVD by pressing Ctrl+C.
 
 ## Troubleshooting
 
 If you encounter issues with running the AVD or it does not appear in the list, ensure that your Android SDK and environment variables are correctly configured. You may also need to check for available system images if you run into any errors.
+
+# Development work flow
+
+1. Generate the android prebuild:
+```bash
+   npm run prebuild
+```
+
+2. Generate the android development build:
+```bash
+   npm run build:dev
+```
+
+Wait for the build to finish, then open https://expo.dev in your browser, locate the weather-app's android internal distribution build, and install it on your Android device.
+
+3. Start the metro bundler in your dev machine:
+```bash
+   npm run start
+```
+
+## Running on emulator
+Press a, to open the app on the emulator.
+
+## Running on device
+Scan the QR code from your android device, and open the link to run the weather-app in your device.

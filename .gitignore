@@ -9,7 +9,7 @@ dist/
 web-build/
 
 # Native
-*.orig.*
+*.orig.*eas
 *.jks
 *.p8
 *.p12
@@ -33,3 +33,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+/ios
+/android
