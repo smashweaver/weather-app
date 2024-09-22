@@ -59,7 +59,7 @@ If you encounter issues with running the AVD or it does not appear in the list, 
    npm run build:dev
 ```
 
-Wait for the build to finish, then open https://expo.dev in your browser, locate the weather-app's android internal distribution build, and install it on your Android device.
+Wait for the build to finish, then open https://expo.dev in the browser of your Android device, locate the weather-app's android internal distribution build, and select install.
 
 3. Start the metro bundler in your dev machine:
 ```bash
@@ -67,7 +67,7 @@ Wait for the build to finish, then open https://expo.dev in your browser, locate
 ```
 
 ## Running on emulator
-Press a, to open the app on the emulator.
+Press a, to open the weather-app development build in the emulator.
 
 ## Running on device
-Scan the QR code from your android device, and open the link to run the weather-app in your device.
+Scan the QR code with your android device, and open the link to run the weather-app development build.
