@@ -1,30 +1,25 @@
-import { useWindowDimensions, ImageBackground, StyleSheet, View } from 'react-native'
+import { useWindowDimensions, ImageBackground, View } from 'react-native'
 import React from 'react'
 import SkiaGradientRect from './SkiaGradientRect'
 import images from '@/constants/images'
+import HomeImage from './HomeImage'
 
 function HomeBackground() {
-  const { width, height } = useWindowDimensions();
+  const dimensions = useWindowDimensions();
+  const { width, height } = dimensions;
+
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1 }}>
       <SkiaGradientRect
         width={width}
         height={height}
         colors={['#2E335A', '#1C1B33']}
       />
-      <ImageBackground source={images.home.background} resizeMode='cover' style={styles.imageBackground} />
+      <ImageBackground source={images.home.background} resizeMode='stretch' style={{ height: height }}>
+        <HomeImage {...dimensions} />
+      </ImageBackground>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  imageBackground: {
-    height: '100%',
-    width: '100%',
-  },
-})
 
 export default HomeBackground
