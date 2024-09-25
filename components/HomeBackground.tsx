@@ -1,11 +1,13 @@
-import { useWindowDimensions, ImageBackground, View } from 'react-native'
+import { ImageBackground, View } from 'react-native'
 import React from 'react'
 import SkiaGradientRect from './SkiaGradientRect'
 import images from '@/constants/images'
 import HomeImage from './HomeImage'
+import HomeSmokeEffect from './HomeSmokeEffect'
+import useApplicationDimensions from '@/utils/useApplicationDimensions'
 
 function HomeBackground() {
-  const dimensions = useWindowDimensions();
+  const dimensions = useApplicationDimensions();
   const { width, height } = dimensions;
 
   return (
@@ -15,8 +17,13 @@ function HomeBackground() {
         height={height}
         colors={['#2E335A', '#1C1B33']}
       />
-      <ImageBackground source={images.home.background} resizeMode='stretch' style={{ height: height }}>
+      <ImageBackground
+        source={images.home.background}
+        resizeMode='stretch'
+        style={{ height: '100%' }}
+      >
         <HomeImage {...dimensions} />
+        <HomeSmokeEffect {...dimensions} />
       </ImageBackground>
     </View>
   )
