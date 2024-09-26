@@ -1,4 +1,4 @@
-import { ImageBackground, View } from 'react-native'
+import { ImageBackground, View, StyleSheet } from 'react-native'
 import React from 'react'
 import SkiaGradientRect from './SkiaGradientRect'
 import images from '@/constants/images'
@@ -11,7 +11,7 @@ function HomeBackground() {
   const { width, height } = dimensions;
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ ...StyleSheet.absoluteFillObject }}>
       <SkiaGradientRect
         width={width}
         height={height}
@@ -20,7 +20,7 @@ function HomeBackground() {
       <ImageBackground
         source={images.home.background}
         resizeMode='stretch'
-        style={{ height: '100%' }}
+        style={{ height }}
       >
         <HomeImage {...dimensions} />
         <HomeSmokeEffect {...dimensions} />

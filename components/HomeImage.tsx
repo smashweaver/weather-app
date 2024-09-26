@@ -8,9 +8,6 @@ function HomeImage(dimensions: ScaledSize) {
   const { scaledWidth, scaledHeight, scaledTop, scaledLeft } = useScaledDimensions({
     width,
     height,
-    baseW: 390,
-    baseH: 844,
-    targetX: 0,
     targetY: 304,
     targetW: 390,
     targetH: 390,

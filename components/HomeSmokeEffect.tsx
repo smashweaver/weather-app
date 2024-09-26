@@ -15,19 +15,10 @@ function HomeSmokeEffect(dimensions: ScaledSize) {
   } = useScaledDimensions({
     width,
     height,
-    baseW: 390,
-    baseH: 844,
-    targetX: 0,
     targetY: 344,
     targetW: 390,
     targetH: 500,
   });
-
-  /*   
-    console.log({ width, height, scaleXFactor, scaleYFactor })
-    console.log({ baseW: 390, baseH: 844, targetY: 344 })
-    console.log({ scaledHeight, scaledWidth, scaledLeft, scaledTop }) 
-  */
 
   return (
     <Canvas style={{ height: scaledHeight, ...StyleSheet.absoluteFillObject, top: scaledTop, left: scaledLeft }}>

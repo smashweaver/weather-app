@@ -8,7 +8,6 @@ interface SkiaGradientRectProps {
 }
 
 function SkiaGradientRect({ width, height, colors }: SkiaGradientRectProps) {
-  // console.log({ width, height, colors })
   return (
     <Canvas style={{ flex: 1 }}>
       <Rect x={0} y={0} width={width} height={height}>
