@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Canvas, Circle, Line, LinearGradient, Shadow, vec } from '@shopify/react-native-skia'
 
 type CircleButtonProps = {
   radius: number
+  pressed: boolean
 }
 
-const CircleButton = ({ radius }: CircleButtonProps) => {
+const CircleButton = ({ radius, pressed }: CircleButtonProps) => {
+  console.log({ pressed })
   const diameter = radius * 2
   return (
     <Canvas style={{ width: diameter, height: diameter }}>
@@ -14,7 +15,11 @@ const CircleButton = ({ radius }: CircleButtonProps) => {
         <LinearGradient
           start={vec(0, 0)}
           end={vec(diameter, diameter)}
-          colors={['#F5F5F9', '#DADFE7']} />
+          colors={[
+            pressed ? '#BBBFC7' : '#F5F5F9',
+            pressed ? '#FFFFFF' : '#DADFE7',
+          ]}
+        />
         <Shadow dx={1} dy={1} blur={0.5} color={'white'} inner />
       </Circle>
       <Line
